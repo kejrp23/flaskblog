@@ -1,7 +1,10 @@
 from flask import Flask, render_template
+import requests
 import datetime
-import myemail
+#import myemail
 
+url = 'https://api.npoint.io/4c57b38e46d5120b6da8'
+content = requests.get(url).json()
 
 year = datetime.datetime.now().year
 
