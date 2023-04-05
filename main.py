@@ -1,7 +1,15 @@
 from flask import Flask, render_template
 import requests
 import datetime
+import sqlite3
 #import myemail
+
+connection = sqlite3.connect('blogs.db')
+cursor = connection.cursor()
+results = cursor.execute("Select * from BlogEntries")
+posts = results.fetchall()
+
+
 
 url = 'https://api.npoint.io/4c57b38e46d5120b6da8'
 content = requests.get(url).json()
@@ -31,7 +39,7 @@ def get_contact():
 
 @app.route("/posts")
 def get_posts():
-    return render_template('post.html', year=year)
+    return render_template('post.html', year=year, posts = posts)
 
 
 if __name__ == "__main__":
