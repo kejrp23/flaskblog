@@ -17,6 +17,6 @@ values 	('20230404', 'Test','Today is always a great day for coding', 'Jason R. 
 		('20230328', 'Test6','Heap vs Stack? when in doubt, Heap', 'Jason R. Pittman', 'C++');
 
 select title, post from BlogEntries --where Subject = 'Python' 
-select * from BlogEntries be order by Subject asc
+select * from BlogEntries be order by date desc
 
 --drop table BlogEntries 

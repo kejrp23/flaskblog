@@ -4,9 +4,9 @@ import datetime
 import sqlite3
 #import myemail
 
-connection = sqlite3.connect('blogs.db')
+connection = sqlite3.connect('./db/blogs.db')
 cursor = connection.cursor()
-results = cursor.execute("Select * from BlogEntries")
+results = cursor.execute("Select * from BlogEntries order by date desc")
 posts = results.fetchall()
 
 

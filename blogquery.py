@@ -9,7 +9,7 @@ year = today.year
 postdate = f'{month}/{day}/{year}'
 print(postdate)
 
-connection = sqlite3.connect('blogs.db')
+connection = sqlite3.connect('./db/blogs.db')
 
 cursor = connection.cursor()
 
