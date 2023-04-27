@@ -45,7 +45,8 @@ static int sql_query(){
 		return 0;
 }
 
-void program(){
+
+void start(){
 		int action;				
 		cin >> action;	
 		if (action == 1){
@@ -54,8 +55,12 @@ void program(){
 		else if (action == 2){
 			sql_query();
 		}
+		else if (action == 3){
+//				quit();
+		}
 		else {
 				cout << "entry not allowed\n";
+				start();
 		}
 }
 			
@@ -73,8 +78,8 @@ int main(){
 		}
 		cout << "**** Welcome to the Blog Editor ****\n\n" << endl;
 		cout << "What Would you like to do?\n" << endl;
-		cout << "1. Add entry \n2.query database\n";
+		cout << "1. Add entry \n2. Query Database\n3. Quit (work in progress)\n";
 		cout << ">";
-		program();
+		start();
 		return 0;
 }
