@@ -1,26 +1,26 @@
-
 #include <iostream>
+#include <ctime>
+#include "core.h"
 
-
-
-
-
-
-void printmsg(std::string y,std::string x){
-		std::cout << "Insert into BlogEntries Values('" << y << "','"<< x << "',"<< ");";
+void today(){
+		time_t now = time(0);
+		char* date_time = ctime(&now);
+		std::cout << date_time << std::endl;
 }
+
+
+
 
 int main()
 {
-		std::string message;
+		std::string date;
 		std::string title;
-		std::cout << "Please Enter a title: ";
-		std::cin >> title;
-		std::cout << "Please begin typing, please a ';' to the end when you are done\n >";
-		getline(std::cin,message,';');	
-		std::system("cls");
-		printmsg(title,message);
-		
+		std::string blogmsg;
+		std::string author {"Jason R. Pittman"};
+		std::string subject;
+		std::cin >> date >> title >> blogmsg >> subject;
+		std::string sql = fmt::format("'{}','{}','{}','{}','{}');",date,title,blogmsg,author,subject);
+		std::cout << sql << std::endl;
 		return 0;
 }
 
