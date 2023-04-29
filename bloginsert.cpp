@@ -1,3 +1,4 @@
+#define FMT_HEADER_ONLY
 #include <iostream>
 #include <ctime>
 #include "core.h"
