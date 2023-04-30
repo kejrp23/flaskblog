@@ -4,6 +4,22 @@
 
 using namespace std;
 
+void insert(){
+		
+		std::string message;
+		std::string title;
+		std::string author;
+		std::string subject;
+		std::cout << "Please Enter a title: ";
+		std::cin >> title;
+		std::cout << "Please begin typing, please a ';' to the end when you are done\n >";
+		getline(std::cin,message,';');	
+		std::cout << "Enter Author name: ";
+		getline(std::cin,author,';');	
+		std::cout << "Subject: ";
+		getline(std::cin,subject,';');	
+//		printmsg(title,message,author,subject);
+}
 
 
 static int callback(void *NotUsed, int count, char **value, char **column) {
@@ -45,6 +61,15 @@ static int sql_query(){
 		return 0;
 }
 
+void clear(){
+		try{
+				system("cls");
+		}
+		catch(...){
+				system("clear");
+		}
+}
+
 
 void start(){
 		int action;				
@@ -74,6 +99,7 @@ int main(){
 				cerr << "Error occurred: File not opened"<< endl;
 		}
 		else {
+				clear();
 				cout << "File Opened successfully \n";
 		}
 		cout << "**** Welcome to the Blog Editor ****\n\n" << endl;
