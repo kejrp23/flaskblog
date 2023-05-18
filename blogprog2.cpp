@@ -78,7 +78,8 @@ static int sql_insert(){
 		sprintf(post,"Insert into BlogEntries(Date,Title,Post,Author,Subject) Values('%s','%s','%s','%s','%s');",date,title,message.c_str(),author,subject);
 //		std::cout << post << std::endl;
 		
-		
+		clear();
+
 		response = sqlite3_exec(db,post,NULL,0,NULL);
 		if (response != SQLITE_OK){
 				std::cerr << "Error with insert\n";
@@ -87,7 +88,7 @@ static int sql_insert(){
 				std::cout << "Data inserted successfully\n";
 		};
 		
-		clear();	
+		
 	
 		return 0;
 };
