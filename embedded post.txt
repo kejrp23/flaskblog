@@ -1,0 +1,12 @@
+insert into BlogEntries(Date,Title,Post,Author,Subject) Values (
+										'2023-05-18',
+										'Embedded Programming',
+										'Lately I have been looking into embedded programming within constrained systems. What a fascinating world this seems to be. It has been a long long time since I have had to worry about, or even think about how much memory I have.
+	much less how much space my program takes up. This is a reflection of how times have changed. I do remember having to uninstall my favorite game just so I could play a new one I got out of a magazine. Those days are long gone however.
+
+	I can also remember only having 40MB or so on my desktop, while only having 4MB of ram. I still remember the day we got 8MB of ram! Man I had been waiting to get my hands on Duke Nukem for so long and with 8MB I could hit the min requirements! 
+Now days we measure everything in GB and TB. We do not stop to think do I need to clean up something. When I first looked at a micro processors memory capacity I was shocked. It had been so long since I saw a kb that I thought it much be a misprint. To clarify for you embedded gurus out there
+I am only talking about beginner chips, just as pi pico and aurduino uno. So theres no need to hit me with the specs of all the other available boards and chips, I am very well aware. 
+
+	Now, the thought of getting my code down to a size that can fit on there all of a sudden became real to me. When I was reading Bjarne Stroustroups book on C++ and he made mention of (writing close to the hardware). I am not sure I truely understood what he meant. Until I wandered into this world.
+I am very eager to push the limits of these chips with my C++ code and battle the restrains the systems have that I got so good at managing a long time ago!', 'Jason R. Pittman','C++')		
