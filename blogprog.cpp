@@ -5,20 +5,23 @@
 using namespace std;
 
 void insert(){
-		
+		//initializing variables to construct entry	
 		std::string message;
 		std::string title;
 		std::string author;
 		std::string subject;
+		
+		
+	//Creating entry	
 		std::cout << "Please Enter a title: ";
 		std::cin >> title;
-		std::cout << "Please begin typing, please a ';' to the end when you are done\n >";
+		std::cout << "Please begin typing, please add a ';' to the end when you are done\n >";
 		getline(std::cin,message,';');	
 		std::cout << "Enter Author name: ";
 		getline(std::cin,author,';');	
 		std::cout << "Subject: ";
 		getline(std::cin,subject,';');	
-//		printmsg(title,message,author,subject);
+		printf("Insert into BlogEntries Values('%s','%s','%s','%s')",title.c_str(),message.c_str(),author.c_str(),subject.c_str());
 }
 
 
@@ -75,7 +78,8 @@ void start(){
 		int action;				
 		cin >> action;	
 		if (action == 1){
-			sql_insert();
+		//	sql_insert();
+			insert();
 		}
 		else if (action == 2){
 			sql_query();
