@@ -105,11 +105,11 @@ static int sql_query(){
 		if (response != SQLITE_OK){
 				std::cerr << "Error\n";
 		}
+		std::cout << "\n\n\nPress any Key to continue";
+		std::cin.get();
+		restart();
 		return 0;
 }
-
-
-
 void start(){
 		int action;				
 		std::cin >> action;	
@@ -129,6 +129,11 @@ void start(){
 		}
 }
 			
+
+void restart(){
+		start();
+}
+
 
 
 int main(){
