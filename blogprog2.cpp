@@ -78,7 +78,7 @@ static int sql_insert(){
 		sprintf(post,"Insert into BlogEntries(Date,Title,Post,Author,Subject) Values('%s','%s','%s','%s','%s');",date,title,message.c_str(),author,subject);
 //		std::cout << post << std::endl;
 		
-		clear();
+//		clear();
 
 		response = sqlite3_exec(db,post,NULL,0,NULL);
 		if (response != SQLITE_OK){
@@ -107,7 +107,6 @@ static int sql_query(){
 		}
 		std::cout << "\n\n\nPress any Key to continue";
 		std::cin.get();
-		restart();
 		return 0;
 }
 void start(){
@@ -129,12 +128,6 @@ void start(){
 		}
 }
 			
-
-void restart(){
-		start();
-}
-
-
 
 int main(){
 		sqlite3* db;
